@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Em Breve</title>
+<link href="Clouds.css" rel="stylesheet">
+<link href="construcao.css" rel="stylesheet">
+</head>
+<body>
+<div id="wb_Image1" style="position:absolute;left:383px;top:86px;width:437px;height:266px;z-index:0;">
+<img src="images/paginaEmConstrucao.png" id="Image1" alt=""></div>
+<div id="wb_JavaScript1" style="position:absolute;left:469px;top:352px;width:461px;height:100px;z-index:1;">
+<div style="color:#191970;font-size:43px;font-family:Arial;font-weight:normal;font-style:normal;text-align:left;text-decoration:none" id="countdown-days"></div>
+</div>
+<div id="wb_IconFont1" style="position:absolute;left:101px;top:143px;width:92px;height:77px;text-align:center;z-index:2;">
+<a href="./index.php"><div id="IconFont1"><i class="material-icons">&#xe5c4;</i></div></a></div>
+<div id="wb_Text1" style="position:absolute;left:183px;top:174px;width:59px;height:15px;z-index:3;">
+<span style="color:#4169E1;font-family:Arial;font-size:16px;"><strong>Voltar</strong></span></div>
+<script>
+var endDate = new Date("Dec 31, 2021 12:00:00").getTime();
+var timer = setInterval(function() 
+{
+   var now = new Date().getTime();
+   var diff = endDate - now;
+   var d = Math.floor(diff /  (1000 * 60 * 60 * 24));
+   var h = Math.floor((diff % (1000 *  60 * 60 * 24)) / (1000 * 60 * 60));
+   var m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+   var s = Math.floor((diff % (1000 * 60)) / 1000);
+   document.getElementById("countdown-days").innerHTML = d + "d " +  h + "h " + m + "m " + s + "s ";
+   if (diff < 0) 
+   {
+      clearInterval(timer);
+      document.getElementById("countdown-days").innerHTML  = "EXPIRED!";
+   }
+}, 1000);
+</script><script src="construcao.js"></script>
+</body>
+</html>

@@ -1,3 +1,6 @@
+version: 0.0
+os: Windows
+hooks:
 files:
   -source: \
   destination: c:\deploy

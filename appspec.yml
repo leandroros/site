@@ -1,10 +1,6 @@
 version: 0.0
 os: windows
 files:
-  -source: \*.zip
+  -source: \
   destination: C:\deploy
 
-  hooks:
-  BeforeInstall:
-    - location: \install.bat
-      timeout: 900

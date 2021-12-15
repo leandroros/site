@@ -1,6 +1,5 @@
 version: 0.0
-os: Windows
-hooks:
+os: windows
 files:
-  -source: \
-  destination: c:\deploy
+  -source: \*.zip
+  destination: C:\deploy

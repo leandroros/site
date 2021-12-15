@@ -3,3 +3,8 @@ os: windows
 files:
   -source: \*.zip
   destination: C:\deploy
+
+  hooks:
+  BeforeInstall:
+    - location: \install.bat
+      timeout: 900

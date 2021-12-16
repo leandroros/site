@@ -43,6 +43,7 @@ body { margin:0px; width: 960px; }
 div#LayoutLYR { float:left; position:absolute; }
 div#NavigationBar1LYR { position:absolute; top:30px; left:100px; width:303px; height:36px; z-index:1 }
 div#NOFSecureSite1LYR { position:absolute; top:152px; left:135px; width:208px; height:106px; z-index:2 }
+div#Texto1LYR { position:absolute; top:309px; left:230px; width:69px; height:17px; z-index:3 }
 -->
 </style>
 
@@ -76,6 +77,9 @@ if (NOF_fileExists("./scripts/ss_remembervalues.php")) include("./scripts/ss_rem
 }
 ?>
 </div>
+    <div id="Texto1LYR" class="TextObject">
+      <p style="margin-bottom: 0px;">Aterado</p>
+    </div>
     <div id="NavigationBar1LYR" style="z-index: 1000">
       <ul id="NavigationBar1" style="z-index: 1000; display: none;">
         <li id="Botãodenavegação1"><a href="./index.php" title="Home" style="line-height: 0">Home</a></li>

@@ -1,6 +1,6 @@
 version: 0.0
 os: windows
-files:
+- files:
   source: \
   destination: C:\deploy
 

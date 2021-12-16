@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 version: 0.0
 os:windows
 files:- source: \
 destination:C:\deploy
 
+=======
+version: 0.0
+os: windows
+files:
+  - source: \
+    destination: C:\deploy
+>>>>>>> 6f8dea098447957c53bd5920f29043cf1ea1d09c

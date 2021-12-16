@@ -1,0 +1,271 @@
+.jcarousel-skin-nof{
+  height: 100%
+}
+
+.jcarousel-skin-nof .jcarousel-container{
+  background: transparent none;
+  height: 100%
+}
+
+.jcarousel-skin-nof .jcarousel-list{
+  height: 100%
+}
+
+.jcarousel-skin-nof .jcarousel-direction-rtl{
+	direction: rtl
+}
+
+.jcarousel-skin-nof .jcarousel-clip{
+  overflow: hidden;
+  height: 100%
+}
+
+.jcarousel-skin-nof .jcarousel-item{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden
+}
+
+.jcarousel-skin-nof .jcarousel-item img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%
+}
+
+.jcarousel-skin-nof .jcarousel-item a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute
+}
+
+.jcarousel-skin-nof .jcarousel-item-placeholder{
+  background: #fff;
+  color: #000
+}
+
+/* Animation */
+.jcarousel-next{
+  transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s
+}
+
+/**
+ *  Horizontal Buttons
+ */
+
+.jcarousel-prev{
+  transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-nof .jcarousel-next-horizontal{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
+  right: 2%;
+  cursor: pointer
+}
+
+.jcarousel-navigation-hover .jcarousel-next-horizontal{
+  opacity: 0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.jcarousel-navigation-hover:hover .jcarousel-next-horizontal{
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+
+.jcarousel-navigation-hover .jcarousel-next-horizontal:hover {
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+.jcarousel-skin-nof .jcarousel-direction-rtl .jcarousel-next-horizontal{
+  top: 0;
+  left: 0;
+  right: auto;
+  background: transparent no-repeat 5% 50%
+}
+
+.jcarousel-skin-nof .jcarousel-next-disabled{
+	visibility: hidden
+}
+
+/* Previous */
+.jcarousel-skin-nof .jcarousel-prev-horizontal{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
+  left: 2%;
+  cursor: pointer
+}
+
+.jcarousel-navigation-hover .jcarousel-prev-horizontal{
+  opacity: 0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.jcarousel-navigation-hover:hover .jcarousel-prev-horizontal{
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+
+.jcarousel-navigation-hover .jcarousel-prev-horizontal:hover {
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+.jcarousel-skin-nof .jcarousel-direction-rtl .jcarousel-prev-horizontal{
+  top: 0;
+  left: auto;
+  right: 0;
+  background: transparent no-repeat 95% 50% /* next */
+}
+
+.jcarousel-skin-nof .jcarousel-prev-disabled{
+  visibility: hidden
+}
+
+/**
+ *  Vertical Buttons
+ */
+.jcarousel-skin-nof .jcarousel-next-vertical{
+  position: absolute;
+  top: auto;
+  bottom: 2%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  cursor: pointer
+}
+
+.jcarousel-navigation-hover .jcarousel-next-vertical{
+  opacity: 0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.jcarousel-navigation-hover:hover .jcarousel-next-vertical{
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+
+.jcarousel-navigation-hover .jcarousel-next-vertical:hover {
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+.jcarousel-skin-nof .jcarousel-direction-rtl .jcarousel-next-vertical{
+  top: auto;
+  bottom: 0;
+  left: 0;
+  background: transparent no-repeat 50% 5% /* prev */
+}
+
+.jcarousel-skin-nof .jcarousel-next-disabled{
+	visibility: hidden
+}
+
+/* Previous */
+.jcarousel-skin-nof .jcarousel-prev-vertical{
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  cursor: pointer
+}
+
+.jcarousel-navigation-hover .jcarousel-prev-vertical{
+  opacity: 0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.jcarousel-navigation-hover:hover .jcarousel-prev-vertical{
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+
+.jcarousel-navigation-hover .jcarousel-prev-vertical:hover {
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+.jcarousel-skin-nof .jcarousel-direction-rtl .jcarousel-prev-vertical{
+  top: 0;
+  left: 0;
+  background: transparent no-repeat 50% 95%
+}
+
+.jcarousel-skin-nof .jcarousel-prev-disabled{
+	visibility: hidden
+}
+
+/* Caption */
+.jcarousel-caption-hover .jcarousel-caption{
+  opacity: 0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
+
+.jcarousel-caption-hover:hover .jcarousel-caption{
+  opacity: 1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"
+}
+
+.jcarousel-skin-nof .jcarousel-caption{
+  position: absolute;
+  bottom: 0;
+  background: #000;
+  background: rgba(0,0,0,0.5);
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 1em;
+  transition: opacity 0.1s;
+  -moz-transition: opacity 0.1s;
+  -webkit-transition: opacity 0.1s;
+  -o-transition: opacity 0.1s
+}
+
+.jcarousel-skin-nof .jcarousel-container-vertical .jcarousel-caption{
+  background: #fff;
+  background: rgba(255,255,255,0.6);
+  color: #000
+}
+
+/* Fit */
+.jcarousel-skin-nof .jcarousel-item img.jcarousel-fit-height {
+  height: 100%;
+  top: 0;
+  margin-top: 0 !important;
+  max-width: none
+}
+
+.jcarousel-skin-nof .jcarousel-item img.jcarousel-fit-width {
+  width: 100%;
+  left: 0;
+  margin-left: 0 !important;
+  max-height: none
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<nof:formInfo xmlns:nof="http://www.netobjects.com/fusion/forminfo" version="1"><nof:parameters><nof:parameter id="smtpServer" name="127.0.0.1"/><nof:parameter id="from" name="sample@domain.com"/><nof:parameter id="to" name="sample@netobjects.com"/><nof:parameter id="subject" name="Form Input"/><nof:parameter id="successUrl" name="./Contact/Success/success.html"/><nof:parameter id="filePath" name=""/><nof:parameter id="fileUploadFld" name=""/></nof:parameters><nof:fields><nof:field name="FormsEditField1"/><nof:field name="FormsEditField2"/><nof:field name="FormsEditField3"/><nof:field name="FormsEditField4"/></nof:fields><nof:template><![CDATA[
+ Prezado Senhor/Senhora, 
+
+ Eis os dados enviados: 
+
+ [FormsEditField1] 
+ [FormsEditField2] 
+ [FormsEditField3] 
+ [FormsEditField4] 
+
+ Obrigado]]></nof:template></nof:formInfo>

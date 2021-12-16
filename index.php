@@ -23,6 +23,32 @@ exit();
 require_once($nof_rootDir . "/" . $nof_scriptDir . "/" . "nof_utils.inc.php");
 $nof_resources->addFile($nof_langFile);
 ?>
+<?php
+error_reporting(0);
+@session_start();
+$nof_suiteName="Testimonials";
+$nof_debug = "false";
+$nof_langFile = "./scripts/Testimonials_pt.properties";
+$nof_rootDir = ".";
+$nof_scriptDir = "scripts";
+?>
+<?php
+if (!file_exists($nof_langFile) || !file_exists($nof_rootDir . "/" . $nof_scriptDir . "/" . "nof_utils.inc.php")) {
+if($nof_debug == "true") {
+echo "<p>Os componentes exigidos pelo pacote <b>Jeova</b> não foram publicados. Verifique as suas definições de publicação no Fusion e republique o site.</p>";
+} else {
+echo "<p>Ocorreu um erro. Entre em contato com o administrador do site</p>
+<p>Código de erro: 103</p>";
+}
+exit();
+}
+
+require_once($nof_rootDir . "/" . $nof_scriptDir . "/" . "nof_utils.inc.php");
+$nof_resources->addFile($nof_langFile);
+?>
+<?php
+require_once($nof_rootDir . "/" . $nof_scriptDir . "/" . "NOF_CaptchaProperties.class.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +69,7 @@ body { margin:0px; width: 960px; }
 div#LayoutLYR { float:left; position:absolute; }
 div#NavigationBar1LYR { position:absolute; top:30px; left:100px; width:303px; height:36px; z-index:1 }
 div#NOFSecureSite1LYR { position:absolute; top:152px; left:135px; width:208px; height:106px; z-index:2 }
-div#Texto1LYR { position:absolute; top:309px; left:230px; width:69px; height:17px; z-index:3 }
+div#NOFTestimonials1LYR { position:absolute; top:289px; left:120px; width:230px; height:138px; z-index:3 }
 -->
 </style>
 
@@ -77,9 +103,44 @@ if (NOF_fileExists("./scripts/ss_remembervalues.php")) include("./scripts/ss_rem
 }
 ?>
 </div>
-    <div id="Texto1LYR" class="TextObject">
-      <p style="margin-bottom: 0px;">Aterado</p>
-    </div>
+    <div id="NOFTestimonials1LYR">
+<?php
+$properties = new NOF_CaptchaProperties();
+$imageChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+if (GetSessionVariable("nof_1639679483600_CaptchSettings")) {
+$previousCaptchaProperties = unserialize(GetSessionVariable("nof_1639679483600_CaptchSettings"));
+$properties->codeChars = $previousCaptchaProperties->imageChars;
+} else {
+$properties->codeChars = "";
+}
+$properties->imageChars  	= nof_captcha_randomChars($imageChars, 5);
+$properties->spaceInner  	= 0;
+$properties->bgColor     	= "ffffff";
+$properties->fgColors    	= Array("000000");
+$properties->spaceTop    	= 10;
+$properties->spaceBottom 	= 10;
+$properties->spaceLeft   	= 5;
+$properties->spaceRight  	= 5;
+$properties->charFontDir 	= "charsmap/zebra";
+
+SetSessionVariable("nof_1639679483600_CaptchSettings", serialize($properties));
+?>
+
+<!-- <img id="NOFTestimonials1" height="138" width="230" src="./add.gif" alt=""> -->
+
+
+<?php
+$nof_debug = "false";
+$nof_suiteName = "Testimonials";
+$nof_langFile = "./scripts/Testimonials_pt.properties";
+$nof_componentId="1639679483600";
+$nof_rootDir=".";
+$nof_scriptDir="scripts";
+$nof_scriptInterfaceFile="Testimonials1639679494845.xml.php";
+if (NOF_fileExists("./scripts/ts_add.php")) include("./scripts/ts_add.php");
+?>
+</div>
     <div id="NavigationBar1LYR" style="z-index: 1000">
       <ul id="NavigationBar1" style="z-index: 1000; display: none;">
         <li id="Botãodenavegação1"><a href="./index.php" title="Home" style="line-height: 0">Home</a></li>
